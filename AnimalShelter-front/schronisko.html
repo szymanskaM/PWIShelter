@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>Schronisko</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+		<header>
+			<div class="menu">
+				<div class="log"><img src="schr.jpg" alt="Logo" width=200 onclick="ChangeMainContent('home')"></div>
+				<nav>
+					<div>
+						<ul>
+							<li><div class="language"><select id="language" onchange="ChangeLanguage()">
+								<option value="pl">PL</option>
+								<option value="en">ENG</option>
+							</select></div></li>
+							<li class="guzikiM"><a href="#" onclick="ChangeMainContent('home')"><div class="pl">Nasze zwierzaki</div><div class="eng">Our pets</div></a></li>
+							<li class="guzikiM konto"><a href="#" onclick="ChangeMainContent('konto')"><div class="pl">Konto</div><div class="eng">Account</div></a></li>
+							<li class="guzikiM loguj"><a href="#" onclick="openLog()"><div class="pl">Logowanie</div><div class="eng">Login</div></a></li>
+							<li><a href="#"><div class="menuMini" onclick="openNav()"><div class="ikonaM"></div><div class="ikonaM"></div><div class="ikonaM"></div></div></a></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</header>
+	
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a href="#" onclick="ChangeMainContent('home')"><div class="pl">Nasze zwierzaki</div><div class="eng">Our pets</div></a>
+			<a href="#" onclick="ChangeMainContent('karmienie')"><div class="pl">Nakarm zwierzaka</div><div class="eng">Feed pet</div></a>
+			<a href="#" onclick="ChangeMainContent('adopcja')"><div class="pl">Szczegóły adopcji</div><div class="eng">Adoption details</div></a>
+			<a href="#" onclick="ChangeMainContent('ogloszenie')"><div class="pl">Ogłoszenia</div><div class="eng">Announcements</div></a>
+			<a href="#" onclick="ChangeMainContent('tymczasowe')"><div class="pl">Tymczasowe domy</div><div class="eng">Temporary Houses</div></a>
+			<div class="kontoB"><a href="#" onclick="ChangeMainContent('konto')"><div class="pl">Konto</div><div class="eng">Account</div></a></div>
+			<div class="logujB"><a href="#" onclick="openLog()"><div class="pl">Logowanie</div><div class="eng">Login</div></a></div>
+		</div>
+        <div class="pasekBoczny">
+			<div class="pl">
+				<button class="button button1" onclick="ChangeMainContent('karmienie')">Nakarm zwierzaka</button>
+				<button class="button button1" onclick="ChangeMainContent('adopcja')">Szczegóły adopcji</button>
+				<button class="button button1" onclick="ChangeMainContent('ogloszenie')">Ogłoszenia</button>
+				<button class="button button1" onclick="ChangeMainContent('tymczasowe')">Tymczasowe domy</button>
+			</div>
+			<div class="eng">
+				<button class="button button1" onclick="ChangeMainContent('karmienie')">Feed pet</button>
+				<button class="button button1" onclick="ChangeMainContent('adopcja')">Adoption details</button>
+				<button class="button button1" onclick="ChangeMainContent('ogloszenie')">Announcements</button>
+				<button class="button button1" onclick="ChangeMainContent('tymczasowe')">Temporary Houses</button>
+			</div>
+		</div>
+		<main onload="ChangeMainContent('ogloszenie')">
+			<div id="panelLog" class="panel">
+				<div class="modal-content">
+					<div class="imgcontainer">
+						<span onclick="closeLog()" class="close">&times;</span>
+					</div>
+					<div class="formLog">
+						<form>
+							<div class="pl"><h1>Logowanie</h1></div><div class="eng"><h1>Login</h1></div>
+							<label><b>E-mail</b></label>
+							<input type="text" placeholder="e-mail" id="emailLog" required>
+							<div class="pl"><label><b>Hasło</b></label></div><div class="eng"><label><b>Password</b></label></div>
+							<input type="password" placeholder="password" id="pswLog" required>
+							<div class="pl"><button class="button2" id="logUserBtn">Zaloguj się</button></div><div class="eng"><button class="button2" id="logUserBtnEng">Log in</button></div>
+						</form>
+					</div>
+					<div class="pl"><p>Nie posiadasz jeszcze konta?<br><a href="#" onclick="registration()">Zarejestruj się</a></p></div>
+					<div class="eng"><p>Don't have an account yet?<br><a href="#" onclick="registration()">Register now</a></p></div>
+				</div>
+			</div>
+			<div id="panelReg" class="panel">
+				<div class="modal-content">
+						<div class="imgcontainer">
+							<span onclick="closeReg()" class="close">&times;</span>
+						</div>
+						<div class="formLog">
+							<form>
+								<div class="pl"><h1>Rejestracja</h1></div><div class="eng"><h1>Registration</h1></div>
+								<div class="pl"><label><b>Imię</b></label></div><div class="eng"><label><b>Name</b></label></div>
+								<input type="text" placeholder="name" id="nameReg" required>
+								<div class="pl"><label><b>Nazwisko</b></label></div><div class="eng"><label><b>Las name</b></label></div>
+								<input type="text" placeholder="last name" id="lastNameReg" required>
+								<div class="pl"><label><b>Numer telefonu</b></label></div><div class="eng"><label><b>Phone number</b></label></div>
+								<input type="text" placeholder="phone number" id="phoneReg" required>
+								<label><b>E-mail</b></label>
+								<input type="text" placeholder="e-mail" id="emailReg" required>
+								<div class="pl"><label><b>Hasło</b></label></div><div class="eng"><label><b>Password</b></label></div>
+								<input type="password" placeholder="password" id="pswReg" required>
+								<div class="pl"><button class="button2" id="saveUserBtn">Zarejestruj się</button></div><div class="eng"><button class="button2" id="saveUserBtnEng">Register</button></div>
+							</form>
+						</div>
+						<div class="pl"><p>Masz już konto?<br><a href="#" onclick="openLog()">Zaloguj się</a></p></div><div class="eng"><p>Do you have an account?<br><a href="#" onclick="openLog()">Log in</a></p></div>
+				</div>
+			</div>
+			<div id="addAnn" class="panel">
+				<div class="modal-content">
+					
+						<div class="imgcontainer">
+							<span onclick="closeAnn()" class="close">&times;</span>
+						</div>
+						<div class="formLog">
+							<form>
+								<div class="pl"><h1>Dodaj ogłoszenie</h1></div><div class="eng"><h1>Add announcement</h1></div>
+								<div class="pl"><p><b>Tytuł</b></p></div><div class="eng"><p><b>Title</b></p></div>
+								<input id="titleAnn" type="text" placeholder="title" name="title" required>
+								<div class="pl"><p><b>Treść</b></p></div><div class="eng"><p><b>Content</b></p></div>
+								<input id="contentAnn" type="text" placeholder="content" name="content" required>
+								<div class="pl"><button class="button2" id="saveAnnBtn">Dodaj</button></div><div class="eng"><button class="button2" id="saveAnnBtnEng">Add</button></div>
+							</form>
+						</div>
+				</div>
+			</div>
+			<div id="deleteAnn" class="panel">
+				<div class="modal-content">
+					
+						<div class="imgcontainer">
+							<span onclick="closeDeleteAnn()" class="close">&times;</span>
+						</div>
+						<div class="formLog">
+							<div class="pl"><h1>Usuń ogłoszenie</h1></div><div class="eng"><h1>Delete announcement</h1></div>
+							<div class="pl"><p><b>Id ogłoszenia:</b></p></div><div class="eng"><p><b>Announcement Id:</b></p></div>
+							<div id="delId">
+								<select class="idDelAnn">
+									<option>1</option>
+								</select>
+							</div>
+							<div class="pl"><button class="button2" id="deleteAnnBtn">Usuń</button></div><div class="eng"><button class="button2" id="deleteAnnBtnEng">Delete</button></div>
+						</div>
+					
+				</div>
+			</div>
+			<div id="content" class="content">
+				<h1>Ogłoszenia</h1>
+				<p>Zapraszamy do sekcji "Nasze zwierzaki", aby zobaczyć jakie stworzenia poszukują kochającego domu.</p>
+			</div>
+			<div class="addNewAnn">
+				<div class="pl"><button class="button2" onclick="addAnn()">Dodaj nowe ogłoszenie!</button></div><div class="eng"><button class="button2" onclick="addAnn()">Add new announcement!</button></div>
+			</div>
+			<div id="userDa"></div>
+			<div id="announ"></div>
+			
+		</main>
+	
+	<footer>
+		<div class="pl"><p>Strona jest własnością Magdaleny Szymańskiej</p></div>
+		<div class="eng">This website is owned by Magdalena Szymańska</div>
+	</footer>
+	<div id="cookies">
+		<div class="pl">
+			<div class="cookiesInfo">
+				<p>Ta strona wykorzystuje pliki cookie. Używamy informacji zapisanych za pomocą plików cookies m.in. w celu poprawienia jej dostępności, personalizacji, obsługi kont użytkowników. Korzystanie z naszej strony bez zmiany ustawień dotyczących cookies oznacza, że będą one zapisane w pamięci urządzenia. Korzystając ze strony wyrażasz zgodę na używanie plików cookies, zgodnie z aktualnymi ustawieniami przeglądarki.Zapoznaj się z Polityką Plików Cookies.</p>
+			</div>
+			<button class="cookiesAccept" onclick="CookiesAccept()">Akceptuję wszystkie pliki cookies</button>
+		</div>
+		<div class="eng">
+			<div class="cookiesInfo">
+				<p>This website uses cookies. We use information saved using cookies, e.g. in improving its quality, for the purpose of personalization, servicing user accounts. Using our site without changes to cookies means that they must be entered into your device's memory. Using the website</p>
+			</div>
+			<button class="cookiesAccept" onclick="CookiesAccept()">I accept all cookies</button>
+		</div>
+	</div>
+<script src="funkcje.js"></script>
+</body>
+</html>

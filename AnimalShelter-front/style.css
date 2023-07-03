@@ -1,0 +1,400 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing:border-box;
+}
+header {
+	background-color: #8d7763;
+	color: #fff;
+	position:sticky;
+	top:0px;
+	width:100%;
+}
+.eng{
+  display:none;
+}
+.pl{
+  display:block;
+}
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	display: inline-block;
+	margin-right: 20px;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+}
+
+main {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+	margin-bottom: 20px;
+	text-align:center;
+}
+
+main h2 {
+	color: #333;
+	margin-top:10px;
+}
+
+main p {
+	line-height: 2;
+}
+
+footer {
+  position: relative;
+  z-index: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
+	text-align: center;
+	margin-left:0px;
+}
+main li{
+	display:inline-block;
+}
+.menu{
+  display: flex;
+  width: 100%;
+  padding-bottom: 5px;
+}
+.log{
+  display: flex;
+  width: 25%;
+}
+nav{
+	display: flex;
+  width: 70%;
+  align-items: center;
+  margin-left: auto;
+  padding-right: 3%;
+  font-size: 1.2em;
+justify-content: right;
+}
+.ikonaM {
+  width: 35px;
+  height: 4px;
+  background-color: #fff;
+  margin: 6px 0;
+  display:block;
+}
+.menuMini{
+  padding: 10% 10%;
+  margin-top: 5px;
+}
+.guzikiM
+{
+	display:none;
+}
+.animal{
+	display:block;
+	width:100%;
+}
+#userDa{
+  display:none;
+  font-size: 20px;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 80px;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align:left;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.SH2{
+	border: 1px solid black;
+	padding:0.5%;
+}
+.pasekBoczny
+{	
+	height:100%;
+	top:85px;
+	position:fixed;
+	background-color: #E1D7CE;
+	width:200px;
+	float:left;
+	display:none;
+}
+.button {
+    border: none;
+    padding: 2% 5%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .content {
+  min-height:400px;
+}
+  .button1 {
+    background-color: white;
+    margin: 2px 2px;
+    color: black;
+    border: 2px solid #766C62;
+    width:195px;
+	display:none;
+  }
+  
+  .button1:hover {
+      margin: 2px 2px;
+    background-color: #766C62;
+    color: white;
+  }
+  .button2 {
+    background-color: #766C62;
+    margin:15px 15px;
+    color: white;
+    border: 1px solid #766C62;
+    width:200px;
+    font-size: 16px;
+    border-radius: 12px;
+    height: 5vh;
+  }
+  
+  .button2:hover {
+    margin:15px 15px;
+    background-color: #42372d;
+    color: white;
+  }
+  .button3 {
+    background-color: #bba997;
+    color: white;
+    border: 1px solid #1f1e1c;
+    width:100px;
+    font-size: 16px;
+    border-radius: 12px;
+    height: 5vh;
+  }
+  
+  .button3:hover {
+    background-color: #42372d;
+    color: white;
+  }
+  .konto{
+    display:none;
+  }
+  .kontoB{
+    display:none;
+  }
+  .loguj{
+    display:none;
+  }
+  .logujB{
+    display:block;
+  }
+  #panelLog{
+    display: none;
+  }
+  #panelReg{
+    display:none;
+  }
+  #addAnn{
+    display: none;
+  }
+  #deleteAnn{
+    display: none;
+  }
+  .panel{
+    display:none;
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 60px;
+  }
+  .modal-content {
+    background-color: #fefefe;
+    margin: 2% auto 15% auto; 
+    border: 1px solid #888;
+    width: 75%; 
+    display:block;
+    max-width: 800px;
+  }
+  .formLog{
+    padding: 10% 10% 0;
+  }
+  
+  .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+  }
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    
+  }
+  .language{
+    position:static;
+    border-width: 3px;
+	  border-radius: 15px;
+    color: white;
+}
+
+.language select{
+	background-color:#be9d7e;
+	border-color: white;
+  color:white;
+  font-weight: bold;
+  border-width: 3px;
+	border-radius: 12px;
+  height: 5vh;
+	width: 100%;
+	padding: 0 0 0 1vw;
+}
+  #cookies {
+    position: fixed;
+    z-index: 2147483645;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #C8C8C8;
+    max-height: 90%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding:2%;
+    font-size: 15px;
+    display:block;
+    text-align:center;
+  }
+  .cookiesInfo{
+    width:100%;
+  }
+  .cookiesAccept{
+    background-color: #8d7763;
+    width:300px;
+    margin-left:0;
+    height:80px;
+    margin-top: 2px;
+  }
+  #delId{
+    position:static;
+    border-width: 3px;
+	  border-radius: 15px;
+    color: white;
+}
+
+#delId select{
+	background-color:#be9d7e;
+	border-color: white;
+  color:white;
+  font-weight: bold;
+  border-width: 3px;
+	border-radius: 12px;
+  height: 5vh;
+	width: 40%;
+	padding: 0 0 0 1vw;
+}
+  .addNewAnn{
+    display:none;
+    text-align:center;
+    margin: auto;
+  }
+@media screen and (min-width: 640px) {
+  .guzikiM{display:inline-block;}
+  .ikonaM{display:none;}
+   main h2{padding-top:0%;}
+  .pasekBoczny{
+	  width:80%;
+	  display:inline-block;
+	  height:180px;
+	  top:80px;
+	  padding:2% 10%;
+	  position:static;}
+.animal{height:300px;}
+ .button1{display:inline-block;
+	height:80px;
+	width:48%;}
+   main{padding-top:180px;}
+   footer{margin-left:0px;}
+   .content {min-height: 500px;}
+   .loguj{display:inline-block;}
+   .konto{display: none;}
+}
+@media screen and (min-width: 1024px) {
+  .guzikiM{display:inline-block;}
+  .ikonaM{display:none;}
+  main h2{padding-top:0px;}
+  .button1{
+	  display:inline;
+	  height:70px;
+	  width:195px;}
+  .pasekBoczny{
+	  width:200px;
+	  padding:0%;
+	  display:block;
+	  height:100%;
+	  position:fixed;}
+ .animal{height:300px;}
+  main{
+	padding-left:200px;
+	padding-top:0px;}
+	footer{margin-left:200px;}
+	.content {min-height: 600px;}
+  .loguj{display:inline-block;}
+   .konto{display: none;}
+}
